@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>The Hive Discovery — Built for the Ones Who Build Everyone Else</title>
+<meta name="description" content="The Hive Discovery is a professional membership community for educators in every sector — teachers, trainers, designers, coaches, and homeschool leaders."/>
+<link rel="canonical" href="https://hivediscovery.com/"/>
+<meta property="og:title" content="The Hive Discovery — Built for the Ones Who Build Everyone Else"/>
+<meta property="og:description" content="A professional membership community for educators in every sector. The teachers, trainers, designers, coaches, and homeschool leaders who are quietly holding the world together."/>
+<meta property="og:url" content="https://hivediscovery.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="The Hive Discovery"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="The Hive Discovery — Built for the Ones Who Build Everyone Else"/>
+<meta name="twitter:description" content="A professional membership community for educators in every sector."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet"/></noscript>
+<link rel="preload" as="image" href="/images/student-studying-in-class.webp" fetchpriority="high"/>
+<link rel="preload" as="font" href="/fonts/nineties-headliner.otf" type="font/otf" crossorigin/>
+<link rel="preload" as="font" href="/fonts/nineties-display.otf" type="font/otf" crossorigin/>
+<style>
+@font-face {
+  font-family: 'NinetiesHeadliner';
+  src: url('/fonts/nineties-headliner.otf') format('opentype');
+  font-weight: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'NinetiesDisplay';
+  src: url('/fonts/nineties-display.otf') format('opentype');
+  font-weight: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'GettingShine';
+  src: url('/fonts/getting-shine.otf') format('opentype');
+  font-weight: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Margie';
+  src: url('/fonts/margie.otf') format('opentype');
+  font-weight: normal; font-display: swap;
+}
+:root {
+  --white:     #FFFFFF;
+  --off-white: #F7F5F0;
+  --cream:     #FAF3DC;
+  --bark:      #0C0B09;
+  --gold:      #F3D156;
+  --gold-dark: #8B6800;
+  --muted:     #5C5144;
+  --border:    rgba(0,0,0,0.09);
+  --craft:     #F3D156;
+  --build:     #5B4FCF;
+  --engage:    #D4307A;
+  --community: #F07B3A;
+  --wellness:  #1D8A6E;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Lato",sans-serif;background:var(--white);color:var(--bark);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+.display{font-family:'NinetiesHeadliner','NinetiesDisplay',Georgia,serif;font-weight:900}
+.script{font-family:"Lato",serif;font-style:italic;font-weight:300}
+
+/* SKIP LINK */
+.skip{position:absolute;top:-40px;left:1rem;z-index:9999;background:var(--gold);color:var(--bark);padding:.5rem 1rem;font-weight:700;border-radius:2px;transition:top .2s}
+.skip:focus{top:1rem}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:60px;display:flex;align-items:center;transition:box-shadow .3s}
+#nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.07)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;width:100%;display:flex;align-items:center;justify-content:space-between}
+.nav-logo img{height:30px;width:auto;filter:brightness(0)}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.theme-btn{
+  background:var(--off-white);border:1.5px solid var(--border);
+  cursor:pointer;font-size:.85rem;padding:.4rem .85rem;
+  border-radius:20px;transition:background .2s,border-color .2s;
+  display:flex;align-items:center;gap:.4rem;
+  font-family:"Lato",sans-serif;font-size:.72rem;font-weight:700;
+  letter-spacing:.08em;color:var(--bark);white-space:nowrap;
+}
+.theme-btn:hover{background:var(--cream);border-color:var(--gold-dark)}
+body.dark .theme-btn{background:rgba(255,255,255,.08);border-color:rgba(250,243,220,.15);color:#FAF3DC}
+body.dark .theme-btn:hover{background:rgba(255,255,255,.14)}
+
+.nav-cta{background:var(--bark);color:#fff;padding:.55rem 1.3rem;border-radius:3px;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--gold);color:var(--bark)}
+
+/* ── HERO ── */
+#hero{
+  min-height:100vh;padding-top:60px;
+  background:var(--white);
+  position:relative;overflow:hidden;
+  display:grid;grid-template-rows:1fr auto;
+}
+.hero-inner{
+  max-width:1200px;margin:0 auto;padding:5rem 2rem 4rem;
+  display:grid;grid-template-columns:1fr 1fr;gap:4rem;
+  align-items:center;position:relative;z-index:2;width:100%;
+}
+/* LEFT */
+.hero-left{display:flex;flex-direction:column}
+.hero-eyebrow{
+  font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold-dark);display:flex;align-items:center;gap:.5rem;margin-bottom:1.5rem;
+}
+.hero-eyebrow span{width:24px;height:1px;background:var(--gold-dark);opacity:.5}
+h1.hero-headline{
+  font-family:'NinetiesHeadliner','NinetiesDisplay',Georgia,serif;font-weight:900;
+  font-size:clamp(3.2rem,5.5vw,6rem);line-height:1;
+  letter-spacing:1px;color:var(--bark);margin-bottom:1.75rem;
+}
+h1.hero-headline em{font-style:italic;color:var(--gold-dark);display:block}
+.hero-sub{
+  font-size:1.02rem;line-height:1.85;color:var(--muted);
+  max-width:400px;margin-bottom:2rem;
+}
+.hero-bee{
+  font-family:'GettingShine','Margie',cursive;
+  font-size:2.4rem;color:var(--gold-dark);
+  margin-bottom:2.25rem;line-height:1.2;
+  display:flex;align-items:center;gap:.75rem;
+}
+.hero-bee::before{
+  content:'';display:block;width:28px;height:1px;
+  background:var(--gold-dark);opacity:.45;flex-shrink:0;
+}
+.hero-form{
+  display:flex;max-width:420px;border-radius:3px;overflow:hidden;
+  box-shadow:0 6px 28px rgba(0,0,0,.1);
+}
+.hero-form input{
+  flex:1;background:#fff;border:1.5px solid rgba(0,0,0,.12);border-right:none;
+  color:var(--bark);font-family:"Lato",sans-serif;font-size:.9rem;
+  padding:.9rem 1.1rem;outline:none;transition:border-color .2s;
+}
+.hero-form input:focus{border-color:var(--gold-dark)}
+.hero-form input::placeholder{color:#767676}
+.hero-form button{
+  background:var(--bark);color:#fff;font-family:"Lato",sans-serif;
+  font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:.9rem 1.4rem;border:none;cursor:pointer;white-space:nowrap;
+  transition:background .2s;
+}
+.hero-form button:hover{background:var(--gold-dark)}
+.form-note{font-size:.7rem;color:#767676;margin-top:.55rem}
+
+/* RIGHT — editorial composition */
+.hero-right{position:relative;height:620px}
+.hero-img-main{
+  position:absolute;top:0;right:0;width:100%;height:560px;
+  border-radius:14px;overflow:hidden;
+}
+.hero-img-main img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-tag{
+  position:absolute;top:1.2rem;left:-0.5rem;
+  background:var(--gold);color:var(--bark);
+  font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  padding:.38rem .9rem;border-radius:2px;z-index:4;
+  box-shadow:0 3px 12px rgba(243,209,86,.4);
+}
+.hero-accent{
+  display:none;
+}
+.hero-accent .al{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.5rem}
+.hero-accent .ah{font-family:'NinetiesHeadliner','NinetiesDisplay',Georgia,serif;font-weight:700;font-size:1.2rem;letter-spacing:1px;color:var(--gold);line-height:1.2}
+.hero-accent .as{font-size:.75rem;color:rgba(255,255,255,.55);margin-top:.4rem}
+
+/* MARQUEE */
+.marquee-bar{
+  background:var(--bark);color:var(--gold);
+  padding:.9rem 0;overflow:hidden;
+  font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  white-space:nowrap;
+  border-top:3px solid var(--gold);border-bottom:3px solid var(--gold);
+}
+.marquee-track{display:inline-flex;animation:marquee 30s linear infinite}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.marquee-item{padding:0 2.5rem}
+.marquee-item::after{content:'🐝';margin-left:2.5rem;opacity:.6}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+
+/* SHARED */
+.kicker{
+  font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold-dark);display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;
+}
+.kicker::before,.kicker::after{content:'';flex:1;height:1px;background:var(--border);max-width:50px}
+.kicker.light{color:var(--gold)}
+.kicker.light::before,.kicker.light::after{background:rgba(243,209,86,.25)}
+.kicker.left::after{display:none}
+h2.stitle{
+  font-family:'NinetiesHeadliner','NinetiesDisplay',Georgia,serif;font-weight:900;font-size:clamp(2.2rem,3.8vw,3.6rem);
+  letter-spacing:1px;line-height:1.06;margin-bottom:1.25rem;
+}
+h2.stitle em{font-style:italic;color:var(--gold-dark)}
+h2.stitle.light em{color:var(--gold)}
+.sbody{font-size:1rem;line-height:1.85;color:var(--muted);max-width:540px}
+
+/* PROBLEM SECTION */
+#problem{
+  padding:6rem 2rem;
+  background:var(--bark);
+  position:relative;overflow:hidden;
+}
+#problem::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:url('/images/bg-texture-0.webp');
+  background-size:cover;background-blend-mode:overlay;opacity:.05;
+}
+.problem-wrap{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;
+  position:relative;z-index:1;
+}
+.problem-copy h2.stitle{color:#fff}
+.problem-copy .sbody{color:rgba(255,255,255,.62);max-width:480px}
+.problem-copy .sbody p+p{margin-top:1.25rem}
+.problem-img{border-radius:12px;overflow:hidden;height:500px;box-shadow:0 32px 64px rgba(0,0,0,.45);position:relative}
+.problem-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(10%)}
+.problem-img-tag{
+  position:absolute;bottom:1.5rem;left:1.5rem;
+  background:var(--gold);color:var(--bark);
+  font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  padding:.45rem .95rem;border-radius:2px;
+}
+
+/* WHO WE SERVE */
+#serve{
+  padding:7rem 2rem;
+  background-color:var(--bark);
+  background-image:url('/images/bg-texture-0.webp');
+  background-size:cover;background-position:center;
+  background-blend-mode:multiply;
+  text-align:center;
+}
+.serve-wrap{max-width:800px;margin:0 auto}
+.serve-wrap .kicker{justify-content:center}
+.serve-wrap h2.stitle{color:#fff;font-size:clamp(2.6rem,5vw,4.4rem)}
+.serve-body{
+  font-size:1.1rem;line-height:1.9;color:rgba(255,255,255,.68);
+  margin:1.5rem auto 0;max-width:640px;
+}
+
+/* PILLARS */
+#pillars{padding:6rem 2rem;background:var(--white)}
+.pillars-header{max-width:680px;margin:0 auto 4rem;text-align:center}
+.pillars-header .kicker{justify-content:center}
+.pillar-row{
+  display:flex;gap:1rem;max-width:1200px;margin:0 auto;
+  align-items:flex-end;justify-content:center;
+}
+/* Arched pill cards — dev.io style */
+.pillar-card{
+  flex:1;min-width:0;
+  border-radius:160px 160px 20px 20px;
+  padding:2.5rem 1.5rem 2rem;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  position:relative;overflow:hidden;
+  transition:transform .3s,box-shadow .3s;
+  cursor:default;
+}
+.pillar-card:hover{transform:translateY(-10px);box-shadow:0 24px 48px rgba(0,0,0,.12)}
+/* Each card gets a distinct background */
+.pillar-card{background:transparent;border:2px solid var(--border)}
+.pillar-card.craft  {background:#fff;border-color:var(--craft);border-width:2px}
+.pillar-card.build  {background:#fff;border-color:var(--build);border-width:2px}
+.pillar-card.engage {background:#fff;border-color:var(--engage);border-width:2px}
+.pillar-card.comm   {background:#fff;border-color:var(--community);border-width:2px}
+.pillar-card.well   {background:#fff;border-color:var(--wellness);border-width:2px}
+/* Name color — black in light mode */
+.pillar-card.craft  .card-name{color:#1a1a1a}
+.pillar-card.build  .card-name{color:#1a1a1a}
+.pillar-card.engage .card-name{color:#1a1a1a}
+.pillar-card.comm   .card-name{color:#1a1a1a}
+.pillar-card.well   .card-name{color:#1a1a1a}
+/* Desc text — black in light mode */
+.pillar-card.craft  .card-desc{color:rgba(0,0,0,.7)}
+.pillar-card.build  .card-desc,.pillar-card.engage .card-desc,
+.pillar-card.comm   .card-desc,.pillar-card.well   .card-desc{color:rgba(0,0,0,.7)}
+/* Pillar color accent dot */
+.pillar-card::before{
+  content:'';width:12px;height:12px;border-radius:50%;
+  display:block;margin:0 auto 1.25rem;flex-shrink:0;
+}
+.pillar-card.craft::before  {background:var(--craft);box-shadow:0 0 0 3px rgba(243,209,86,.3)}
+.pillar-card.build::before  {background:var(--build);box-shadow:0 0 0 3px rgba(91,79,207,.2)}
+.pillar-card.engage::before {background:var(--engage);box-shadow:0 0 0 3px rgba(212,48,122,.2)}
+.pillar-card.comm::before   {background:var(--community);box-shadow:0 0 0 3px rgba(240,123,58,.2)}
+.pillar-card.well::before   {background:var(--wellness);box-shadow:0 0 0 3px rgba(29,138,110,.2)}
+.card-name{font-family:'NinetiesHeadliner','NinetiesDisplay',Georgia,serif;font-weight:900;font-size:1.6rem;letter-spacing:1px;margin-bottom:.6rem}
+.card-desc{font-size:.82rem;line-height:1.65;color:var(--muted)}
+/* Stagger heights for visual rhythm */
+.pillar-card.craft  {padding-top:3.5rem}
+.pillar-card.build  {padding-top:5rem}
+.pillar-card.engage {padding-top:6.5rem}
+.pillar-card.comm   {padding-top:5rem}
+.pillar-card.well   {padding-top:3.5rem}
+
+/* CHAIN */
+#chain{
+  padding:6rem 2rem;
+  background-color:var(--cream);
+  background-image:url('/images/bg-texture-0.webp');
+  background-size:cover;background-position:center;
+  background-blend-mode:overlay;
+  overflow:hidden;
+}
+.chain-wrap{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;
+}
+.chain-img{border-radius:12px;overflow:hidden;height:520px;box-shadow:0 24px 56px rgba(0,0,0,.1)}
+.chain-img img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.chain-lines{margin:2rem 0;display:flex;flex-direction:column;gap:.1rem}
+.chain-line{
+  font-family:'NinetiesHeadliner','NinetiesDisplay',Georgia,serif;font-weight:700;
+  font-size:clamp(.95rem,1.6vw,1.3rem);letter-spacing:1px;
+  padding:.85rem 1.25rem;border-left:3px solid transparent;
+  border-radius:0 8px 8px 0;transition:background .2s;
+}
+.chain-line:nth-child(1){border-color:var(--craft)}
+.chain-line:nth-child(2){border-color:var(--build)}
+.chain-line:nth-child(3){border-color:var(--community)}
+.chain-line:nth-child(4){border-color:var(--wellness);font-weight:900}
+.chain-line:hover{background:rgba(0,0,0,.04)}
+.chain-cta{margin-top:.5rem;font-size:.88rem;color:var(--muted);line-height:1.8}
+
+/* ABOUT */
+#about{padding:6rem 2rem;background:var(--white)}
+.about-wrap{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:start;
+}
+.founder-cards{display:flex;flex-direction:column;gap:1.5rem}
+.founder-card{
+  display:flex;gap:1.5rem;padding:2rem;
+  border-radius:12px;border:1px solid var(--border);align-items:flex-start;
+  transition:box-shadow .25s;
+}
+.founder-card:hover{box-shadow:0 12px 40px rgba(0,0,0,.08)}
+.founder-card.dark{background:var(--bark);border-color:var(--bark)}
+.founder-card.gold{background:var(--gold);border-color:var(--gold)}
+.founder-photo{display:none}
+.founder-photo img{width:100%;height:100%;object-fit:contain;object-position:bottom center;display:block}
+.fn{font-family:'NinetiesHeadliner','NinetiesDisplay',Georgia,serif;font-weight:900;font-size:1.5rem;letter-spacing:1px;margin-bottom:.25rem}
+.dark .fn{color:var(--gold)} .gold .fn{color:var(--bark)}
+.fr{font-size:.58rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.6rem}
+.dark .fr{color:rgba(255,255,255,.48)} .gold .fr{color:rgba(0,0,0,.60)}
+.fb{font-size:.82rem;line-height:1.7}
+.dark .fb{color:rgba(255,255,255,.62)} .gold .fb{color:rgba(0,0,0,.65)}
+.about-content .kicker{justify-content:flex-start}
+.about-content .kicker::after{display:none}
+.about-body{font-size:1rem;line-height:1.85;color:var(--muted);margin:1rem 0 2rem}
+.btn-outline{
+  display:inline-flex;text-decoration:none;
+  background:var(--bark);color:#fff;
+  padding:.6rem 1.4rem;border-radius:3px;
+  font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  transition:background .2s;
+}
+.btn-outline:hover{background:var(--gold-dark)}
+
+/* FAQ */
+#faq{padding:6rem 2rem;background:var(--off-white)}
+.faq-wrap{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1.8fr;gap:5rem;align-items:start;
+}
+.faq-intro .kicker{justify-content:flex-start}
+.faq-intro .kicker::after{display:none}
+.faq-list{display:flex;flex-direction:column}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{
+  width:100%;background:none;border:none;cursor:pointer;text-align:left;
+  padding:1.3rem 0;font-family:"Lato",sans-serif;font-size:.95rem;font-weight:700;
+  color:var(--bark);display:flex;justify-content:space-between;align-items:center;gap:1rem;
+}
+.faq-q:hover{color:var(--gold-dark)}
+.faq-ico{font-size:1.1rem;transition:transform .25s;flex-shrink:0;color:var(--gold-dark)}
+.faq-item.open .faq-ico{transform:rotate(45deg)}
+.faq-a{font-size:.88rem;line-height:1.8;color:var(--muted);max-height:0;overflow:hidden;transition:max-height .35s,padding .35s}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:1.3rem}
+
+/* WAITLIST */
+#waitlist{
+  padding:7rem 2rem;background:var(--bark);
+  position:relative;overflow:hidden;text-align:center;
+}
+#waitlist::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:url('/images/bg-texture-0.webp');
+  background-size:cover;opacity:.04;
+}
+.wl-inner{max-width:620px;margin:0 auto;position:relative;z-index:1}
+.wl-kicker{font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1.5rem}
+h2.wl-title{
+  font-family:'NinetiesHeadliner','NinetiesDisplay',Georgia,serif;font-weight:900;font-size:clamp(2.4rem,5vw,4rem);
+  letter-spacing:1px;line-height:1.06;color:#fff;margin-bottom:1.5rem;
+}
+h2.wl-title em{font-style:italic;color:var(--gold);display:block}
+.wl-body{font-size:1rem;line-height:1.85;color:rgba(255,255,255,.62);margin-bottom:2.5rem}
+.wl-form{
+  display:flex;max-width:460px;margin:0 auto;border-radius:3px;overflow:hidden;
+  box-shadow:0 8px 32px rgba(243,209,86,.18);
+}
+.wl-form input{
+  flex:1;background:rgba(255,255,255,.96);border:none;
+  color:var(--bark);font-family:"Lato",sans-serif;font-size:.9rem;
+  padding:1rem 1.2rem;outline:none;
+}
+.wl-form input::placeholder{color:#6E6E6E}
+.wl-form button{
+  background:var(--gold);color:var(--bark);font-family:"Lato",sans-serif;
+  font-weight:700;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:1rem 1.4rem;border:none;cursor:pointer;white-space:nowrap;transition:background .2s;
+}
+.wl-form button:hover{background:#fff}
+.wl-note{font-size:.7rem;color:rgba(255,255,255,.48);margin-top:.7rem}
+.wl-success{
+  display:none;background:var(--gold);color:var(--bark);
+  padding:1rem 1.5rem;border-radius:3px;font-weight:700;margin-top:1rem;
+}
+
+/* FOOTER */
+footer{background:#fff;border-top:1px solid var(--border);padding:2.5rem 2rem;text-align:center}
+.footer-logo{height:26px;width:auto;filter:brightness(0);opacity:.6;margin-bottom:.7rem;display:block;margin:0 auto .7rem}
+.footer-text{font-size:.68rem;color:#767676;letter-spacing:.1em;text-transform:uppercase}
+
+/* DARK MODE */
+body.dark{background:#0D0C0A;color:#FAF3DC;
+  --white:#0D0C0A;--off-white:#161410;--cream:#1C1915;
+  --border:rgba(250,243,220,.08);--muted:#A89880}
+body.dark #nav{background:rgba(13,12,10,.96)}
+body.dark .nav-logo img{filter:brightness(0) invert(1)}
+body.dark h1.hero-headline{color:#FFFFFF}
+body.dark h2.stitle{color:#FAF3DC}
+body.dark .chain-line{color:#FAF3DC}
+body.dark .pillar-card{background:#1C1915}
+body.dark .pillar-card.craft .card-name{color:#FFFFFF}
+body.dark .pillar-card.craft .card-desc{color:rgba(255,255,255,.8)}
+body.dark .founder-card:not(.dark):not(.gold){background:#1C1915}
+body.dark .faq-q{color:#FAF3DC}
+body.dark .footer-logo{filter:brightness(0) invert(1)}
+body.dark footer{background:#0D0C0A}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .pillar-row{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:768px){
+  .hero-inner,.problem-wrap,.chain-wrap,.about-wrap,.faq-wrap{grid-template-columns:1fr;gap:2.5rem}
+  .hero-right{height:320px}
+  .hero-img-main{width:100%;height:280px}
+  .hero-accent{width:72%;bottom:-1rem}
+  .problem-img,.chain-img{height:280px}
+  .pillar-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+  .pillar-card{
+    border-radius:24px!important;
+    padding:1.5rem 1.2rem 1.5rem!important;
+    padding-top:1.5rem!important;
+    min-height:auto;
+  }
+  .pillar-card::before{width:32px;height:32px;top:1rem;left:50%;margin-left:-16px}
+  .card-name{font-size:1.2rem}
+  .card-desc{font-size:.78rem;line-height:1.5}
+  #pillars{padding:3rem 1rem}
+  .pillars-header{margin-bottom:2rem}
+  .faq-intro{display:none}
+  .faq-wrap{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .pillar-row{grid-template-columns:1fr!important;gap:.75rem;max-width:360px}
+  .pillar-card{
+    flex-direction:row!important;
+    border-radius:16px!important;
+    padding:1.2rem 1rem!important;
+    text-align:left!important;
+    align-items:center!important;
+    gap:.75rem;
+  }
+  .pillar-card::before{position:relative;top:auto;left:auto;margin-left:0;width:28px;height:28px;flex-shrink:0}
+  .card-name{font-size:1.1rem;margin-bottom:0}
+  .card-desc{font-size:.75rem;line-height:1.45}
+  h1.hero-headline{font-size:3rem}
+  #pillars{padding:2.5rem 1rem}
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">Skip to main content</a>
+<nav id="nav" role="banner">
+  <div class="nav-inner">
+    <div class="nav-logo"><img width="385" height="162" src="/images/logo-0.svg" alt="The Hive Discovery"/></div>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn" aria-pressed="false" aria-label="Toggle dark mode">🌙</button>
+      <a href="#waitlist" class="nav-cta">Join the Waitlist</a>
+    </div>
+  </div>
+</nav>
+<main id="main">
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <p class="hero-eyebrow"><span></span>For every educator, in every setting</p>
+      <h1 class="hero-headline">Built for the ones<br>who build<br><em>everyone else.</em></h1>
+      <p class="hero-sub">The Hive Discovery is a professional membership community for educators in every sector. The teachers, trainers, designers, coaches, and homeschool leaders who are quietly holding the world together. This is your village.</p>
+      <p class="hero-bee"><span>🐝 Bees are tiny problem solvers. So are you.</span></p>
+      <form class="hero-form" id="heroForm" aria-label="Join waitlist">
+        <input type="email" name="EMAIL" placeholder="hello@hivediscovery.com" required aria-label="Email address" autocomplete="email"/>
+        <button type="submit">Join the Waitlist</button>
+      </form>
+      <p class="form-note">No spam. Just early access and a community that shows up.</p>
+    </div>
+    <div class="hero-right" aria-hidden="true">
+      <span class="hero-tag">Professional Community · Educators Everywhere</span>
+      <div class="hero-img-main">
+        <img src="images/student-studying-in-class.webp" alt="Educator guiding a student through a focused classroom lesson at The Hive Discovery" width="1400" height="933" fetchpriority="high">
+      </div>
+      <div class="hero-accent">
+        <p class="al">The Hive Discovery</p>
+        <p class="ah">Built for the ones<br>who pour in.</p>
+        <p class="as">Seedling · Cultivator · Architect</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-bar" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Teachers pour into everyone else</span>
+    <span class="marquee-item">The Hive pours into them</span>
+    <span class="marquee-item">Think. Do. Breathe. Together.</span>
+    <span class="marquee-item">Seedling · Cultivator · Architect</span>
+    <span class="marquee-item">The village starts here</span>
+    <span class="marquee-item">Teachers pour into everyone else</span>
+    <span class="marquee-item">The Hive pours into them</span>
+    <span class="marquee-item">Think. Do. Breathe. Together.</span>
+    <span class="marquee-item">Seedling · Cultivator · Architect</span>
+    <span class="marquee-item">The village starts here</span>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="problem-wrap">
+    <div class="problem-copy">
+      <p class="kicker light">Why The Hive exists</p>
+      <h2 class="stitle light">You were never<br>supposed to do<br><em>this alone.</em></h2>
+      <div class="sbody">
+        <p>Educators are the most community-building profession in the world — and somehow, the least resourced with community of their own. You've been pouring into systems, students, and spaces that weren't built to pour back. The Hive is.</p>
+        <p>You were never supposed to do this without a village.</p>
+      </div>
+    </div>
+    <div class="problem-img">
+      <img src="/images/inline-0.webp" alt="Dedicated educator preparing materials to support student learning" width="900" height="600" loading="lazy">
+      <span class="problem-img-tag">The village starts here</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section id="serve">
+  <div class="serve-wrap">
+    <p class="kicker light">Who belongs here</p>
+    <h2 class="stitle light">The common thread isn't<br>where you teach.<br><em>It's that you do.</em></h2>
+    <p class="serve-body">The Hive Discovery was built for educators in every sector — K–12 classrooms and corporate training rooms, homeschool tables and university lecture halls, online platforms and community centers. If you show up for other people's growth before your own, you belong here. Full stop.</p>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section id="pillars">
+  <div class="pillars-header">
+    <p class="kicker">Five pillars. One ecosystem.</p>
+    <h2 class="stitle">Built around you.<br><em>All of you.</em></h2>
+    <p class="sbody" style="margin:0 auto">The Hive organizes around the areas where educators have the most to gain — and the least support to get there.</p>
+  </div>
+  <div class="pillar-row">
+    <div class="pillar-card craft">
+      <div class="card-name">Craft</div>
+      <p class="card-desc">The most powerful thing an educator builds is a learning experience. Deepen your craft here.</p>
+    </div>
+    <div class="pillar-card build">
+      <div class="card-name">Build</div>
+      <p class="card-desc">Turn your expertise into resources, courses, and income. Build the thing you were made to build.</p>
+    </div>
+    <div class="pillar-card engage">
+      <div class="card-name">Engage</div>
+      <p class="card-desc">Grow your audience, your career, and your voice. Show up where it counts.</p>
+    </div>
+    <div class="pillar-card comm">
+      <div class="card-name">Community</div>
+      <p class="card-desc">Peer spaces, accountability, and belonging. The village is here and it's built for you.</p>
+    </div>
+    <div class="pillar-card well">
+      <div class="card-name">Wellness</div>
+      <p class="card-desc">You do your best work when you're resourced. Real tools for a sustainable practice — because showing up fully matters.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CHAIN -->
+<section id="chain">
+  <div class="chain-wrap">
+    <div class="chain-img">
+      <img src="/images/inline-1.webp" alt="Group of students collaborating and engaged in a hands-on learning activity" width="900" height="600" loading="lazy">
+    </div>
+    <div>
+      <p class="kicker left">The heart of the hive</p>
+      <h2 class="stitle">Connect. Grow. Teach<br><em>with everything you have.</em></h2>
+      <div class="chain-lines">
+        <div class="chain-line">Find your people across every sector and setting.</div>
+        <div class="chain-line">Develop the skills and confidence your work deserves.</div>
+        <div class="chain-line">Build resources, systems, and a career you love.</div>
+        <div class="chain-line">Show up for your students at your absolute best.</div>
+      </div>
+      <p class="chain-cta">The Hive is where educators stop going it alone — and start growing alongside a community that genuinely gets what you carry.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-wrap">
+    <div class="founder-cards">
+      <div class="founder-card dark">
+        <div class="founder-photo"><img src="images/jay.webp" alt="Jay, Co-Founder and Creative Director of The Hive Discovery" width="500" height="500" loading="lazy"></div>
+        <div>
+          <div class="fn">Jay</div>
+          <div class="fr">Co-Founder · Creative Director</div>
+          <p class="fb">Designer, curriculum builder, and Outschool instructor. Brings strategy, structure, and the belief that educators deserve ecosystems that take their ambitions seriously.</p>
+        </div>
+      </div>
+      <div class="founder-card gold">
+        <div class="founder-photo"><img src="images/misha.webp" alt="Misha, Co-Founder and Community Architect of The Hive Discovery" width="500" height="500" loading="lazy"></div>
+        <div>
+          <div class="fn">Misha</div>
+          <div class="fr">Co-Founder · Community Architect</div>
+          <p class="fb">Community builder and educator who turned her own search for connection into a blueprint for collective growth.</p>
+        </div>
+      </div>
+    </div>
+    <div class="about-content">
+      <p class="kicker left">Who built this</p>
+      <h2 class="stitle">An ecosystem grown<br>from the <em>inside out.</em></h2>
+      <p class="about-body">The Hive Discovery was built to create the conditions where educators can actually thrive — not just survive the work they love. We are educators first, builders second — and we serve educators in every sector, because learning doesn't only happen in K-12 classrooms. We built the ecosystem we needed. Now we're opening it up.</p>
+      <a href="#waitlist" class="btn-outline">Find Your Hive →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-wrap">
+    <div class="faq-intro">
+      <p class="kicker left">Questions?</p>
+      <h2 class="stitle">We've got<br><em>answers.</em></h2>
+      <p class="sbody">Everything you need before you find your hive.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is The Hive Discovery? <span class="faq-ico">+</span></button>
+        <div class="faq-a">A professional membership community built because educators deserve a real professional home. The Hive addresses the three things research links most directly to educator sustainability: isolation, identity collapse, and no visible path forward. Community, tools, and engagement to change that — for every educator, in every setting.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Who is this ecosystem for? <span class="faq-ico">+</span></button>
+        <div class="faq-a">Anyone who builds knowledge for a living. K-12 teachers, homeschool parents and microschool leaders, corporate trainers, online educators, higher ed faculty, coaches, community educators, and EdTech builders. If you show up for other people's growth before your own, this is your village.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What are the membership tiers? <span class="faq-ico">+</span></button>
+        <div class="faq-a">Three tiers named for the growth, not the price point: <strong>Seedling</strong> for those just getting started, <strong>Cultivator</strong> for educators actively building, and <strong>Architect</strong> for leaders ready to go deep. Join the waitlist for full details and founding member pricing.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">When does it launch? <span class="faq-ico">+</span></button>
+        <div class="faq-a">Doors open soon. Waitlist members get first access, founding member pricing, and a chance to shape The Hive before it goes public. Get on the list.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What makes this different from other educator spaces? <span class="faq-ico">+</span></button>
+        <div class="faq-a">Most educator spaces are built for consumption — watch this, download that, lurk here. The Hive is built for contribution. And unlike spaces built only for classroom teachers, The Hive serves educators in every sector. Because learning doesn't only happen in schools. It happens everywhere people grow.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section id="waitlist">
+  <div class="wl-inner">
+    <span class="wl-kicker">The village starts here</span>
+    <h2 class="wl-title">You have been building<br>other people's futures<em>for years.</em></h2>
+    <p class="wl-body">Lesson plans and rubrics and feedback and presence — day after day, for learners who may never fully understand what you gave them. The Hive Discovery was built for you. Not as a resource to consume. As a community to belong to.</p>
+    <form class="wl-form" id="wlForm" aria-label="Join waitlist">
+      <input type="email" name="EMAIL" placeholder="hello@hivediscovery.com" required aria-label="Email address" autocomplete="email"/>
+      <button type="submit">Count Me In</button>
+    </form>
+    <p class="wl-note">No spam. No noise. Just the Hive. 🐝</p>
+    <div class="wl-success" id="wlSuccess">You're in! 🐝 We'll be in touch soon.</div>
+  </div>
+</section>
+</main>
+
+<footer role="contentinfo">
+  <img width="385" height="162" class="footer-logo" alt="" src="/images/logo-0.svg" loading="lazy"/>
+  <p class="footer-text">Think. Do. Breathe. Together. · © 2026 The Hive Discovery</p>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20);
+},{passive:true});
+const tb=document.getElementById('themeBtn');
+if(localStorage.getItem('hive-theme')==='dark'){document.body.classList.add('dark');tb.textContent='☀️';tb.setAttribute('aria-pressed','true')}
+tb.addEventListener('click',()=>{
+  const d=document.body.classList.toggle('dark');
+  tb.textContent=d?'☀️':'🌙';
+  tb.setAttribute('aria-pressed',d?'true':'false');
+  localStorage.setItem('hive-theme',d?'dark':'light');
+});
+function toggleFaq(btn){
+  const item=btn.closest('.faq-item');
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!open) item.classList.add('open');
+}
+function submitMC(email,cb){
+  const u='https://hivediscovery.us16.list-manage.com/subscribe/post-json?u=15d5ce2f94c1ba326ccbd9e98&id=a6933a3494&f_id=00ddc3e1f0&EMAIL='+encodeURIComponent(email)+'&b_15d5ce2f94c1ba326ccbd9e98_a6933a3494=&c=mcCb';
+  window.mcCb=function(d){if(d.result==='success'||d.msg.indexOf('already')>-1) cb();};
+  var s=document.createElement('script');s.src=u;document.body.appendChild(s);
+}
+document.getElementById('heroForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  submitMC(this.querySelector('input').value,()=>{
+    this.innerHTML='<p style="padding:.9rem;font-weight:700;color:var(--gold-dark)">🐝 You are on the list!</p>';
+  });
+});
+document.getElementById('wlForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  submitMC(this.querySelector('input').value,()=>{
+    this.style.display='none';
+    document.getElementById('wlSuccess').style.display='block';
+  });
+});
+</script>
+</body>
+</html>
